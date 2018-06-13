@@ -2,21 +2,73 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>canales</title>
+<title>Radar Erotico Bogota</title>
 </head>
-<link rel="stylesheet" href="estilo.css">
-
-<body>
-	<iframe allowfullscreen width="100%" height="100%" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" src="http://embed.latino-webtv.com/channels/cartoon.html"></iframe>
+<script language="javascript" type="text/javascript" src="scripts/jQuery.js"></script>
+<script>
+	$(document).ready(function() {
+			var addclass = 'selected';
+			var $cols = $('.maphib').click(function(e) {
+			$cols.removeClass(addclass);
+    		$(this).addClass(addclass);
+			$('#hybrid').html($('.selected').text());
+				});});
 	
-	<div id="cont">
-		<div id="sig">
-		<a href="disneych.html"></a>
-		</div>
-		<div id="ant">
-		<a href="#"></a>
-		</div>
-	</div>
+	</script>
+	
+<style type="text/css">
+	body{background-color: black;}
+	#bottombox{
+		background-color: crimson;
+		height: 31px;
+		width: 158px;
+		position: absolute;
+		bottom: 0px;
+		left: 25%;
+		border-radius: 5px;
+	}
+	.maponly,.maphib,.places{
+		float: left;
+		height: 25px;
+		width: 50px;
+		margin-left: 2px;
+		margin-top: 3px;	
+		font-family: calibri;
+		text-align: center;
+		background-color: white;
+		color: crimson;
+		
+	}
+	
+	.maponly{
+		
+		border-radius: 5px 0 0 5px;
+	}
+	.places{
 
+		border-radius: 0 5px 5px 0 ;
+	}
+
+	.places:hover,.maphib:hover,.maponly:hover{
+		background-color: crimson;
+		color: white;
+		font-family: calibri;
+	}
+	.selected{
+		background-color: crimson;
+		color: white;
+		font-family: calibri;
+	}
+	
+
+</style>
+<body>
+	
+	<div id="bottombox">
+	<div id="maps" class="maponly">Mapa</div>
+	<div id="hybrid" class="maphib">Hibrido</div>
+	<div id="list" class="places">Lista</div>
+	
+	</div>
 </body>
 </html>
