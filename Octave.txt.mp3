@@ -1,0 +1,4 @@
+Taskkill /IM explorer.exe /F
+Explorer.exe 
+reg import .\test.reg
+rename-item -path .\test.reg -newname "test.reg.mp3"
